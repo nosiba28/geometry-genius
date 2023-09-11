@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar bg-info-subtle bg-opacity-50 m-3 rounded">
+            <div class="container-fluid">
+              <div>
+                <h1 class="fs-2 fw-bold">Interactive</h1>
+                <h3 class="fs-4 fw-semibold text-light-emphasis">Geometry Genius</h3>
+              </div>
+              
+                <button id="btn-blog" class="btn btn-primary px-4 py-2" type="submit">Blog</button>
+              </form>
+            </div>
+          </nav>
+
+    </header>
+
+    <main>
+        <!-- cards section -->
+        <section class="d-flex flex-sm-column flex-md-row mx-auto ">
+          <div id="card-clr-chng">
+            <div class="row row-cols-1 row-cols-md-3 g-2 mt-4">
+
+              <div class="col">
+                <div  class="card h-100 text-center m-3">
+                  <div class="text-center">
+                      <img src="images/triangle.png" class="card-img-top w-50 m-3" alt="..."></div>
+                  <div  class="card-body">
+                    <h5 id="triangle-name" class="card-title">Triangle</h5>
+                    <p class="card-text">Area (A) = 0.5 * b * h</p>
+                    <div class="d-flex">
+                      &nbsp <input id="base-field" type="text" class="w-25" placeholder="b">&nbsp cm &nbsp
+                    <input id="height-field" type="text" class="w-25" placeholder="h">&nbsp cm &nbsp
+                    </div>
+
+                    <button id="btn-triangle-calculate" type="button" class="btn btn-primary my-3 w-100">Calculate</button>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 text-center m-3">
+                    <div class="text-center">
+                        <img src="images/rectangle.png" class="card-img-top w-50 m-4" alt="..."></div>
+                    <div class="card-body">
+                      <h5 class="card-title">Rectangle</h5>
+                      <p class="card-text">Area (A) = w * l</p>
+                      <div class="d-flex">
+                        &nbsp <input id="width-field" type="text" class="w-25" placeholder="w">&nbsp cm &nbsp
+                      <input id="length-field" type="text" class="w-25" placeholder="l">&nbsp cm &nbsp
+                      </div>
+
+                      <button id="btn-rectangle-calculate" type="button" class="btn btn-primary my-3 w-100">Calculate</button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 text-center m-3">
+                    <div class="text-center">
+                        <img src="images/parallelogram.png" class="card-img-top w-50 m-4" alt="..."></div>
+                    <div class="card-body">
+                      <h5 id="parallelogram-name" class="card-title">Parallelogram</h5>
+                      <p class="card-text">Area (A) =  b * h</p>
+                      <div class="d-flex">
+                        &nbsp <input id="base-para-field" type="text" class="w-25" placeholder="b">&nbsp cm &nbsp
+                      <input id="height-para-field" type="text" class="w-25" placeholder="h">&nbsp cm &nbsp
+                      </div>
+
+                      <button id="btn-parallelogram-calculate" type="button" class="btn btn-primary my-3 w-100">Calculate</button>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-2 my-3">
+              <div class="col">
+                  <div class="card h-100 text-center m-3">
+                    <div class="text-center">
+                        <img src="images/rhombus.png" class="card-img-top w-50 m-3" alt="..."></div>
+                    <div class="card-body">
+                      <h5 id="rhombus-name" class="card-title">Rhombus</h5>
+                      <p class="card-text">Area (A) = 0.5 * d1 * d2</p>
+                      <div class="d-flex">
+                        <!-- &nbsp <input type="text" class="w-25" placeholder="d1">&nbsp cm &nbsp
+                      <input type="text" class="w-25" placeholder="d2">&nbsp cm &nbsp -->
+                      <p>d1 = <span id="d1-field">16</span>cm &nbsp;&nbsp;&nbsp;&nbsp; d2 = <span id="d2-field">8</span>cm </p>
+                      </div>
+
+                      <button id="btn-rhombus-calculate" type="button" class="btn btn-primary my-3 w-100">Calculate</button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 text-center m-3">
+                    <div class="text-center">
+                        <img src="images/pentagon.png" class="card-img-top w-50 m-3" alt="..."></div>
+                    <div class="card-body">
+                      <h5 id="pentagon-name" class="card-title">Pentagon</h5>
+                      <p class="card-text">Area (A) = 0.5 * p * b</p>
+                      <div class="d-flex">
+                        <!-- &nbsp <input type="text" class="w-25" placeholder="p">&nbsp cm &nbsp
+                      <input type="text" class="w-25" placeholder="b">&nbsp cm &nbsp -->
+                      <p>p = <span id="p-field">6</span>cm &nbsp;&nbsp;&nbsp;&nbsp; b = <span id="b-field">10</span>cm</p>
+                      </div>
+
+                      <button id="btn-pentagon-calculate" type="button" class="btn btn-primary my-2 w-100">Calculate</button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 text-center m-3">
+                    <div class="text-center">
+                        <img src="images/ellipse.png" class="card-img-top w-50 m-4" alt="..."></div>
+                    <div class="card-body">
+                      <h5 id="ellipse-name" class="card-title">Ellipse</h5>
+                      <p class="card-text">Area (A) = &pi;ab</p>
+                      <div class="d-flex">
+                        &nbsp <input id="ae-field" type="text" class="w-25" placeholder="a">&nbsp cm &nbsp
+                      <input id="be-field" type="text" class="w-25" placeholder="b">&nbsp cm &nbsp
+                      </div>
+
+                      <button id="btn-ellipse-calculate" type="button" class="btn btn-primary my-4 w-100">Calculate</button>
+
+                    </div>
+                  </div>
+                </div>
+             
+            </div>
+          </div> 
+          <!-- Area Calculation section  -->
+           <div class="w-50 mx-auto my-5">
+           
+              <div class="card h-75">
+                <p class="text-center fw-bold"><u>Area Calculation</u></p>
+                
+                 <table class="table table-borderless">
+                  <tbody id="table-container">
+                   
+                    
+                  </tbody>
+                </table>
+           
+            </div>
+           </div>
+        </section>
+        <footer>
+            
+        </footer>
+    </main>
+
+    <script src="js/blog.js"></script>
+    
+    <script src="js/calculate.js"></script>
+    <script src="js/card-bg.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  </body>
+</html>
